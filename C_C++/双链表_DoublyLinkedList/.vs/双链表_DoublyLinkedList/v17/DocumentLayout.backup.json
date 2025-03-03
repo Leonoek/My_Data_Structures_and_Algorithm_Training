@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\32929\\Desktop\\C\u0026C\u002B\u002B\\\u53CC\u94FE\u8868_DoublyLinkedList\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7EE1350A-3780-48EA-BEF8-0278A08D7060}|\u53CC\u94FE\u8868_DoublyLinkedList\\\u53CC\u94FE\u8868_DoublyLinkedList.vcxproj|C:\\Users\\32929\\Desktop\\C\u0026C\u002B\u002B\\\u53CC\u94FE\u8868_DoublyLinkedList\\\u53CC\u94FE\u8868_DoublyLinkedList\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7EE1350A-3780-48EA-BEF8-0278A08D7060}|\u53CC\u94FE\u8868_DoublyLinkedList\\\u53CC\u94FE\u8868_DoublyLinkedList.vcxproj|solutionrelative:\u53CC\u94FE\u8868_DoublyLinkedList\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\32929\\Desktop\\C\u0026C\u002B\u002B\\\u53CC\u94FE\u8868_DoublyLinkedList\\\u53CC\u94FE\u8868_DoublyLinkedList\\main.cpp",
+              "RelativeDocumentMoniker": "\u53CC\u94FE\u8868_DoublyLinkedList\\main.cpp",
+              "ToolTip": "C:\\Users\\32929\\Desktop\\C\u0026C\u002B\u002B\\\u53CC\u94FE\u8868_DoublyLinkedList\\\u53CC\u94FE\u8868_DoublyLinkedList\\main.cpp*",
+              "RelativeToolTip": "\u53CC\u94FE\u8868_DoublyLinkedList\\main.cpp*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-24T08:53:33.536Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

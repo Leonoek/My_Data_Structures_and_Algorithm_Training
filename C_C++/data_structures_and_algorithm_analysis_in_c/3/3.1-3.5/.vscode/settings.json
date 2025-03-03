@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "test_intersection_single_link_list.h": "c",
+        "test_single_link_list.h": "c",
+        "algorithm": "c",
+        "format": "c"
+    }
+}

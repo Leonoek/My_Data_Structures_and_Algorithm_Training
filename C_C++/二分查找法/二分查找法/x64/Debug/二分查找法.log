@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\32929\Desktop\c++\二分查找法\二分查找法\main.cpp(11,1): warning C4715: “Method1::BinarySearch”: 不是所有的控件路径都返回值
+  二分查找法.vcxproj -> C:\Users\32929\Desktop\c++\二分查找法\x64\Debug\二分查找法.exe

@@ -1,0 +1,2 @@
+C:\Users\32929\Desktop\c++\c语言经典100题\x64\Debug\4.第几天.exe.lastcodeanalysissucceeded
+C:\Users\32929\Desktop\c++\c语言经典100题\4.第几天\x64\Debug\NativeCodeAnalysis.read.1.tlog

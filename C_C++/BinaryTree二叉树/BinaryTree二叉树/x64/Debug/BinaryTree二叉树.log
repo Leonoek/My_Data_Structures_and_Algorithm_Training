@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\32929\Desktop\c++\BinaryTree二叉树\BinaryTree二叉树\main.cpp(5,16): warning C4091: “typedef ”: 没有声明变量时忽略“TreeNode”的左侧
+  BinaryTree二叉树.vcxproj -> C:\Users\32929\Desktop\c++\BinaryTree二叉树\x64\Debug\BinaryTree二叉树.exe

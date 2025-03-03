@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\32929\\Desktop\\C\u0026C\u002B\u002B\\linked list\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A661ABB8-5759-4081-A693-C8D20EB14596}|linked list\\linked list.vcxproj|C:\\Users\\32929\\Desktop\\C\u0026C\u002B\u002B\\linked list\\linked list\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A661ABB8-5759-4081-A693-C8D20EB14596}|linked list\\linked list.vcxproj|solutionrelative:linked list\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\32929\\Desktop\\C\u0026C\u002B\u002B\\linked list\\linked list\\main.cpp",
+              "RelativeDocumentMoniker": "linked list\\main.cpp",
+              "ToolTip": "C:\\Users\\32929\\Desktop\\C\u0026C\u002B\u002B\\linked list\\linked list\\main.cpp",
+              "RelativeToolTip": "linked list\\main.cpp",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-24T02:43:56.958Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

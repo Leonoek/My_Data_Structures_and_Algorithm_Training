@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Users\32929\Desktop\c++\c语言经典100题\2.求利润\main.c(10,3): warning C4098: “Method1”:“void”函数返回值
+  2.求利润.vcxproj -> C:\Users\32929\Desktop\c++\c语言经典100题\x64\Debug\2.求利润.exe
+C:\Users\32929\Desktop\c++\c语言经典100题\2.求利润\main.c(44): warning C6031: 返回值被忽略: “scanf”。

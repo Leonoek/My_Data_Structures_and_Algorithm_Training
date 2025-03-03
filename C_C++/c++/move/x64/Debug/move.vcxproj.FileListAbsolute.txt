@@ -1,0 +1,3 @@
+C:\Users\32929\Desktop\c++_thread\move\move\x64\Debug\move.exe
+C:\Users\32929\Desktop\c++\move\move\x64\Debug\move.exe
+C:\Users\32929\Desktop\c++\c++\move\x64\Debug\move.exe

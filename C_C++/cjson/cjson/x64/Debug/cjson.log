@@ -1,0 +1,6 @@
+﻿  cJSON.c
+C:\Users\32929\Desktop\c++\cjson\cjson\cJSON.c(169,18): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\32929\Desktop\c++\cjson\cjson\cJSON.c(292,10): warning C4244: “=”: 从“__int64”转换到“int”，可能丢失数据
+C:\Users\32929\Desktop\c++\cjson\cjson\cJSON.c(527,31): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\32929\Desktop\c++\cjson\cjson\cJSON.c(681,50): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+  cjson.vcxproj -> C:\Users\32929\Desktop\c++\cjson\x64\Debug\cjson.exe

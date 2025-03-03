@@ -1,0 +1,6 @@
+﻿  main.c
+C:\Users\32929\Desktop\c++\c语言经典100题\96.字符串中子串的个数\main.c(7,19): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\32929\Desktop\c++\c语言经典100题\96.字符串中子串的个数\main.c(8,19): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\32929\Desktop\c++\c语言经典100题\96.字符串中子串的个数\main.c(30,19): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\32929\Desktop\c++\c语言经典100题\96.字符串中子串的个数\main.c(31,19): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  96.字符串中子串的个数.vcxproj -> C:\Users\32929\Desktop\c++\c语言经典100题\x64\Debug\96.字符串中子串的个数.exe
