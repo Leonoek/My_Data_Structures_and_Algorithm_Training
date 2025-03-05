@@ -12,29 +12,41 @@ int merge(int* array, int head, int mid, int end){
     int t_tmp;
     while (p1 <= mid && p2 <= end)
     {
-        t_tmp = p2;
-        while (array[p1] < array[t_tmp] && t_tmp <= end)
-        {
-            result += array[p1];
-            ++t_tmp;
-        }
-        tmp_array[p_tmp++] = array[p1++];
+        // t_tmp = p2;
+        // while (array[p1] < array[t_tmp] && t_tmp <= end)
+        // {
+        //     result += array[p1];
+        //     ++t_tmp;
+        // }
+        // tmp_array[p_tmp++] = array[p1++];
 
-        if (array[p1] >= array[p2])
-        {
-            tmp_array[p_tmp++] = array[p2++];
-        }
+        // if (array[p1] >= array[p2])
+        // {
+        //     tmp_array[p_tmp++] = array[p2++];
+        // }
+
+        result += array[p1] < array[p2] ? ((end - p2 + 1) * array[p1]) : 0;
+        t_tmp = array[p1] < array[p2] ? array[p1++] : array[p2++];
+        tmp_array[p_tmp++] = t_tmp;
     }
     
     while (p1 <= mid)
     {
-        tmp_array[p_tmp++] = array[p1++];
+        t_tmp = array[p1++];
+        tmp_array[p_tmp++]  = t_tmp;
     }
     
     while (p2 <= end)
     {
-        tmp_array[p_tmp++] = array[p2++];
+        t_tmp = array[p2++];
+        tmp_array[p_tmp++]  = t_tmp;
     }
+
+    for (int i = head, j = 0; i <= end; i++)
+    {
+        array[i] = tmp_array[j++];
+    }
+    
     return result;
 }
 
@@ -50,7 +62,7 @@ int process(int* array, int head, int end){
 
 int main(){
     srand((unsigned)time(NULL));
-    int array_num = (rand() % 10);
+    int array_num = rand() % 10;
     while (!array_num)
     {
         array_num = (rand() % 10);
