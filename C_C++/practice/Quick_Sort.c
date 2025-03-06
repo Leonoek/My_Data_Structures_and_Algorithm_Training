@@ -33,6 +33,19 @@ int partition(int nums[], int left, int right) {
     return i;
 }
 
+/* 快速排序 */
+void quickSort(int nums[], int left, int right) {
+    // 子数组长度为 1 时终止递归
+    if (left >= right) {
+        return;
+    }
+    // 哨兵划分
+    int pivot = partition(nums, left, right);
+    // 递归左子数组、右子数组
+    quickSort(nums, left, pivot - 1);
+    quickSort(nums, pivot + 1, right);
+}
+
 int merge(int* array, int head, int target, int end){
     myswap(array, target, end);
     int p1 = head;
@@ -104,12 +117,13 @@ int main(){
         printf("%d ", input_array[i]);
     }
     printf("\n");
-    process(input_array, 0, array_num - 1);
 
     // 对数器
     int input_array2[array_num];
-    memcpy(input_array2, input_array, array_num);
-    partition(input_array2, 0, array_num - 1);
+    memcpy(input_array2, input_array, array_num * sizeof(int));
+
+    process(input_array, 0, array_num - 1);
+    quickSort(input_array2, 0, array_num - 1);
     
     int result = memcmp(input_array, input_array2, array_num);
     if (result != 0)
