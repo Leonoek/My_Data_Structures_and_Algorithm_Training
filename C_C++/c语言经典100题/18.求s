@@ -1,4 +1,0 @@
-﻿  main.c
-C:\Users\32929\Desktop\c++\c语言经典100题\18.求s=a+aa+aaa+aaaa++\main.c(58,2): warning C4013: “strcat”未定义；假设外部返回 int
-C:\Users\32929\Desktop\c++\c语言经典100题\18.求s=a+aa+aaa+aaaa++\main.c(70,17): warning C4013: “strlen”未定义；假设外部返回 int
-  18.求s=a+aa+aaa+aaaa++.vcxproj -> C:\Users\32929\Desktop\c++\c语言经典100题\x64\Debug\18.求s=a+aa+aaa+aaaa++.exe
