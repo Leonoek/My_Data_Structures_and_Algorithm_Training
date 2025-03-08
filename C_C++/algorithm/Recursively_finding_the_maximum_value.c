@@ -1,6 +1,6 @@
 /*
 递归求数组中的最大值，
-时间复杂度：O(N)
+时间复杂度：O(N longn)
 */
 #include <stdio.h>
 #include <time.h>
