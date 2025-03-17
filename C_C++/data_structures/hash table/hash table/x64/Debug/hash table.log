@@ -1,4 +1,0 @@
-﻿  main.cpp
-C:\Users\32929\Desktop\c++\hash table\hash table\main.cpp(6,16): warning C4091: “typedef ”: 没有声明变量时忽略“Pair”的左侧
-C:\Users\32929\Desktop\c++\hash table\hash table\main.cpp(11,16): warning C4091: “typedef ”: 没有声明变量时忽略“ArrayHashMap”的左侧
-  hash table.vcxproj -> C:\Users\32929\Desktop\c++\hash table\x64\Debug\hash table.exe
