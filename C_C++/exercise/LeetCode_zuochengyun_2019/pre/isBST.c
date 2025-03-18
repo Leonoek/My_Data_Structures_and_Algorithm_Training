@@ -41,6 +41,38 @@ Tree ADD_right(Tree input_array, Elementtype val){
     return new_tree;
 }
 
+#define STACK_CAPACITY 10
+struct stack{
+    Tree* array;
+    int size;
+    int capacity;
+};
+
+typedef struct stack* mystack;
+
+void Stack_add(mystack input_stack, Tree input_array){
+    if (!input_array)
+    {
+        return;
+    }
+    
+    input_stack->array[++input_stack->size] = input_array;
+}
+
+Tree Stack_out(mystack input_stack){
+    if ((*input_stack).size == -1)
+    {
+        return NULL;
+    }
+    
+    Tree tmp_array = (*input_stack).array[((*input_stack).size)--];
+    return tmp_array;
+}
+
+bool Stack_isempty(mystack input_stack){
+    return input_stack->size == -1 ? true : false;
+}
+
 #define QUEUE_Capacity 10
 struct queue{
    Tree* array;
@@ -91,9 +123,33 @@ bool Queue_isempty(myqueue input_queue){
     return input_queue->size == 0? true : false;
 }
 
-// 判断是否是二叉搜索树
-myqueue queue1 = NULL;
+// 利用几个变量，判断是否是二叉搜索树
 int pre_val;
+bool isBST1(Tree input_array){
+    if (input_array == NULL)
+    {
+        return true;
+    }
+    
+    bool result = isBST1(input_array->left);
+    if (!result)
+    {
+        return false;
+    }
+    
+    if (input_array->value < pre_val)
+    {
+        return false;
+    }else
+    {
+        pre_val = input_array->value;
+    }
+    
+    return isBST1(input_array->right);
+}
+
+// 利用队列，判断是否是二叉搜索树
+myqueue queue1 = NULL;
 void process(Tree input_array){
     if (input_array == NULL)
     {
@@ -105,7 +161,7 @@ void process(Tree input_array){
     process(input_array->right);
 }
 
-bool isBST(Tree input_array){
+bool isBST2(Tree input_array){
     queue1 = Queue_init();
     process(input_array);
     Tree node = NULL;
@@ -123,7 +179,47 @@ bool isBST(Tree input_array){
     return true;
 }
 
+// 利用栈，判断是否是二叉搜索树
+bool isBST3(Tree input_array){
+    if (!input_array)
+    {
+        return true;
+    }
+    
+    Tree stack_array[STACK_CAPACITY];
+    struct stack stack1 = {
+        .array = stack_array,
+        .size = -1,
+        .capacity = STACK_CAPACITY,
+    };
+
+    Tree root = input_array;
+    while (root != NULL || !Stack_isempty(&stack1))
+    {
+        if (root != NULL)
+        {
+            Stack_add(&stack1, root);
+            root = root->left;
+        }else
+        {
+            root = Stack_out(&stack1);
+            if (pre_val >= root->value)
+            {
+                return false;
+            }else
+            {
+                pre_val = root->value;
+            }
+            
+            root = root->right;
+        }
+
+    }
+    return true;
+}
+
 int main(){
+    // 是搜索二叉树
     Tree t1 = Create(10);
     Tree t2 = ADD_left(t1, 5);
     Tree t3 = ADD_right(t1, 15);
@@ -132,10 +228,7 @@ int main(){
     Tree t6 = ADD_left(t3, 12);
     Tree t7 = ADD_right(t3, 20);
 
-    pre_val = INT_MIN;
-    int result = isBST(t1);
-    printf("%d\n", result);
-
+    // 不是搜索二叉树
     Tree t10 = Create(20);
     Tree t20 = ADD_left(t10, 10);
     Tree t30 = ADD_right(t10, 30);
@@ -143,8 +236,29 @@ int main(){
     Tree t50 = ADD_right(t20, 15);
     Tree t60 = ADD_left(t30, 5);
     Tree t70 = ADD_right(t30, 15);
+
     pre_val = INT_MIN;
-    result = isBST(t10);
-    printf("%d\n", result);
+    int result = isBST1(t1);
+    printf("isBST1: %d\n", result);
+
+    pre_val = INT_MIN;
+    result = isBST1(t10);
+    printf("isBST1: %d\n", result);
+
+    pre_val = INT_MIN;
+    result = isBST2(t1);
+    printf("isBST2: %d\n", result);
+
+    pre_val = INT_MIN;
+    result = isBST2(t10);
+    printf("isBST2: %d\n", result);
+
+    pre_val = INT_MIN;
+    result = isBST3(t1);
+    printf("isBST3: %d\n", result);
+
+    pre_val = INT_MIN;
+    result = isBST3(t10);
+    printf("isBST3: %d\n", result);
     return 0;
 }
