@@ -1,5 +1,5 @@
 /*
-打印链表
+层序遍历
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -179,8 +179,8 @@ void free_hash(struct hash* h) {
 }
 
 
-// Binary Search Tree,BST, 层序遍历
-int BST_max_width(Tree input_array){
+// level-order traversal,LOT, 层序遍历
+int LOT_max_width_hash(Tree input_array){
     if (!input_array)
     {
         return -1;
@@ -236,7 +236,7 @@ int main(){
 
     // 层序遍历
     printf("\n层序遍历: ");
-    int result = BST_max_width(t1);
+    int result = LOT_max_width_hash(t1);
     printf("\nmax width: %d\n", result);
     return 0;
 }

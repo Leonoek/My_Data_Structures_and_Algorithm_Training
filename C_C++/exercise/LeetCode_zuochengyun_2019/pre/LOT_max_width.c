@@ -1,5 +1,5 @@
 /*
-打印链表
+层序遍历
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -90,8 +90,8 @@ bool Queue_isempty(myqueue input_queue){
     return input_queue->size == 0? true : false;
 }
 
-// Binary Search Tree,BST, 层序遍历
-int BST_max_width(Tree input_array){
+// level-order traversal,LOT, 层序遍历
+int LOT_max_width(Tree input_array){
     if (!input_array)
     {
         return -1;
@@ -100,7 +100,6 @@ int BST_max_width(Tree input_array){
     myqueue queue1 = Queue_init();
     Tree root = input_array;
     Queue_add(queue1, root);
-    int cur_level = 1;
     int max_width = 0;
     int cur_level_width = 1;
     Tree node_cur_end = input_array;
@@ -150,7 +149,7 @@ int main(){
 
     // 层序遍历
     printf("\n层序遍历: ");
-    int result = BST_max_width(t1);
+    int result = LOT_max_width(t1);
     printf("\nmax width: %d\n", result);
     return 0;
 }

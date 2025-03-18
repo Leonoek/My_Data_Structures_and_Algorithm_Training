@@ -1,5 +1,5 @@
 /*
-打印链表
+判断是不是搜索二叉树
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -218,6 +218,85 @@ bool isBST3(Tree input_array){
     return true;
 }
 
+/* method2 */
+#define MAX(x, y) (x) > (y) ? (x) : (y)
+#define MIN(x, y) (x) < (y) ? (x) : (y)
+struct data
+{
+    bool isbalance;
+    int max;
+    int min;
+};
+
+struct data* mydata_init(bool isbalance, int max, int min){
+    struct data* new_data = malloc(sizeof(struct data));
+    if (!new_data)
+    {
+        fprintf(stderr, "no more memory!");
+        exit(EXIT_FAILURE);
+    }
+    
+    new_data->isbalance = isbalance;
+    new_data->max = max;
+    new_data->min = min;
+    return new_data;
+}
+
+// balanced binary tree,bbt,平衡二叉树
+struct data* isBST4(Tree input_array){
+    if (!input_array)
+    {
+        return NULL;
+    }
+    
+    struct data* left = isBST4(input_array->left);
+    struct data* right = isBST4(input_array->right);
+
+    int max = input_array->value;
+    int min = input_array->value;
+    if (left)
+    {
+        max = MAX(left->max, max);
+        // min = MIN(left->min, min);
+    }
+
+    if (right)
+    {
+        // max = MAX(right->max, max);
+        min = MIN(right->min, min);
+    }
+    
+    /* method 1 */
+    // bool isbalanced = true;
+    // if (left && (left->max >= input_array->value || !left->isbalance))
+    // {
+    //     isbalanced = false;
+    // }
+    
+    // if (right && (right->min <= input_array->value || !right->isbalance))
+    // {
+    //     isbalanced = false;
+    // }
+
+    /* method 2 */
+    
+    bool isbalanced = false;
+    if ((left ? (left->max < input_array->value && left->isbalance) : true)
+        &&
+        (right ? (right->min > input_array->value && right->isbalance) : true))
+    {
+        isbalanced = true;
+    }
+    
+    
+
+    return mydata_init(isbalanced, max, min);
+}
+
+bool start1(Tree input_array){
+    return isBST4(input_array)->isbalance;
+}
+
 int main(){
     // 是搜索二叉树
     Tree t1 = Create(10);
@@ -260,5 +339,12 @@ int main(){
     pre_val = INT_MIN;
     result = isBST3(t10);
     printf("isBST3: %d\n", result);
+
+    
+    result = start1(t1);
+    printf("isBST4: %d\n", result);
+
+    result = start1(t10);
+    printf("isBST4: %d\n", result);
     return 0;
 }
