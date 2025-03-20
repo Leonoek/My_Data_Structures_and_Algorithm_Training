@@ -1,5 +1,5 @@
 /*
-打印链表
+打印二叉树
 */
 #include <stdio.h>
 #include <stdlib.h>
