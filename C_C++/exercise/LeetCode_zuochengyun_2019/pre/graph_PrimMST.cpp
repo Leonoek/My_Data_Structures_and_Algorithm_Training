@@ -73,53 +73,46 @@ std::shared_ptr<Graph> createGraph(const std::vector<std::vector<int>>& input_ve
     return graph;
 }
 
-class UnionFind
-{
-public:
-    std::unordered_map<std::shared_ptr<Node>, std::shared_ptr<std::set<std::shared_ptr<Node>>>> hashNode;
-    UnionFind(const std::shared_ptr<Graph>& input_graph){
-        for (const auto& i : input_graph->nodes)
-        {
-            auto new_set = std::make_shared<std::set<std::shared_ptr<Node>>>(std::initializer_list<std::shared_ptr<Node>>{i.second});
-            this->hashNode.emplace(i.second, new_set);
-        }
-    }
-
-    bool isSameset(const std::shared_ptr<Node>& from, const std::shared_ptr<Node>& to){
-        return hashNode[from] == hashNode[to];
-    }
-
-    void unionSet(const std::shared_ptr<Node>& from, const std::shared_ptr<Node>& to){
-        const auto& to_nodes = hashNode[to];
-        const auto& from_nodes = hashNode[from];
-
-        for (const auto& node : *to_nodes) {
-            from_nodes->emplace(node);
-        }
-        hashNode[to] = hashNode[from];
-    }
-    ~UnionFind(){}
-};
-
-std::set<std::shared_ptr<Edge>> KruskalMST(const std::shared_ptr<Graph>& input_graph){
-    UnionFind unionFind {input_graph};
+std::set<std::shared_ptr<Edge>> PrimMST(const std::shared_ptr<Graph>& input_graph){
     auto EdgeCompare = [](const std::shared_ptr<Edge>& a, const std::shared_ptr<Edge>& b){
         return a->weight > b->weight;
     };
     std::priority_queue<std::shared_ptr<Edge>, std::vector<std::shared_ptr<Edge>>, decltype(EdgeCompare)> priorityQueue(EdgeCompare);
-    for (auto edge : input_graph->edges)
-    {
-        priorityQueue.push(edge);
-    }
+    std::set<std::shared_ptr<Node>> set;
     std::set<std::shared_ptr<Edge>> result;
-    while (priorityQueue.size())
+
+    for (const auto& pair : input_graph->nodes)
     {
-        auto edge = priorityQueue.top();
-        priorityQueue.pop();
-        if (!unionFind.isSameset(edge->from, edge->to))
+        const auto& node = pair.second;
+        if (set.find(node) == set.end())
         {
-            result.emplace(edge);
-            unionFind.unionSet(edge->from, edge->to);
+            set.emplace(node);
+            for (const auto& i : node->edges)
+            {
+                priorityQueue.push(i);
+            }
+            while (!priorityQueue.empty())
+            {
+                // method 1
+                // const auto& edge = priorityQueue.top();
+                const auto edge = priorityQueue.top();
+                priorityQueue.pop();
+
+                //method 2
+                // auto edge = std::move(priorityQueue.top());
+                // priorityQueue.pop();
+
+                const auto& toNode = edge->to;
+                if (set.find(toNode) == set.end())
+                {
+                    set.emplace(toNode);
+                    result.emplace(edge);
+                    for (const auto& i : toNode->edges)
+                    {
+                        priorityQueue.push(i);
+                    }
+                }
+            }
         }
     }
     return result;
@@ -128,7 +121,7 @@ std::set<std::shared_ptr<Edge>> KruskalMST(const std::shared_ptr<Graph>& input_g
 int main() {
     std::vector<std::vector<int>> vector1 {
         {7, 1, 2},
-        {7, 2, 1},
+        // {7, 2, 1},
         {2, 1, 3},
         {4, 3, 4},
         {1000, 4, 2},
@@ -137,7 +130,7 @@ int main() {
     };
 
     std::shared_ptr<Graph> graph = createGraph(vector1);
-    auto edges = KruskalMST(graph);
+    auto edges = PrimMST(graph);
     for (auto edge : edges)
     {
         std::cout << edge->weight << std::endl;
