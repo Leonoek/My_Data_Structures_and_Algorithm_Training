@@ -1,2 +1,0 @@
-C:\Users\32929\Desktop\c++\chrono\chrono\x64\Debug\chrono.exe
-C:\Users\32929\Desktop\c++\c++\chrono\x64\Debug\chrono.exe

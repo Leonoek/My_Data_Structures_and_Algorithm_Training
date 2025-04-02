@@ -1,4 +1,0 @@
-﻿  main.cpp
-C:\Users\32929\Desktop\c++\c++\move\main.cpp(8,18): warning C4267: “=”: 从“size_t”转换到“uint32_t”，可能丢失数据
-  LINK : 没有找到 C:\Users\32929\Desktop\c++\c++\x64\Debug\move.exe 或上一个增量链接没有生成它；正在执行完全链接
-  move.vcxproj -> C:\Users\32929\Desktop\c++\c++\x64\Debug\move.exe

@@ -1,4 +1,0 @@
-﻿  main.c
-C:\Users\32929\Desktop\c++\c语言经典100题\32.删除一个字符串中的指定字母\main.c(43,14): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\32929\Desktop\c++\c语言经典100题\32.删除一个字符串中的指定字母\main.c(46,19): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-  32.删除一个字符串中的指定字母.vcxproj -> C:\Users\32929\Desktop\c++\c语言经典100题\x64\Debug\32.删除一个字符串中的指定字母.exe

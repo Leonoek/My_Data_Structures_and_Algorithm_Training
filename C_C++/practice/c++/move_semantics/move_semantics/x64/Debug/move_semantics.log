@@ -1,3 +1,0 @@
-﻿  main.cpp
-C:\Users\32929\Desktop\c++\move_semantics\move_semantics\main.cpp(8,18): warning C4267: “=”: 从“size_t”转换到“uint32_t”，可能丢失数据
-  move_semantics.vcxproj -> C:\Users\32929\Desktop\c++\move_semantics\move_semantics\x64\Debug\move_semantics.exe

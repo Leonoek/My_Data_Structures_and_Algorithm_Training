@@ -1,3 +1,0 @@
-﻿  main.cpp
-C:\Users\32929\Desktop\c++\插入排序insertionSort\插入排序insertionSort\main.cpp(10,10): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-  插入排序insertionSort.vcxproj -> C:\Users\32929\Desktop\c++\插入排序insertionSort\插入排序insertionSort\x64\Debug\插入排序insertionSort.exe

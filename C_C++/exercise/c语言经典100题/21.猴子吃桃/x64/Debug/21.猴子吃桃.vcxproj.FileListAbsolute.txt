@@ -1,2 +1,0 @@
-C:\Users\32929\Desktop\c++\c语言经典100题\x64\Debug\21.猴子吃桃.exe.lastcodeanalysissucceeded
-C:\Users\32929\Desktop\c++\c语言经典100题\21.猴子吃桃\x64\Debug\NativeCodeAnalysis.read.1.tlog

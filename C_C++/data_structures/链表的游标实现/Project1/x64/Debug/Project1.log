@@ -1,5 +1,0 @@
-﻿  main.c
-C:\Users\32929\Desktop\C_C++\链表的游标实现\Project1\main.c(125,14): warning C4047: “==”:“void *”与“List”的间接级别不同
-C:\Users\32929\Desktop\C_C++\链表的游标实现\Project1\main.c(134,14): warning C4047: “!=”:“Position”与“void *”的间接级别不同
-C:\Users\32929\Desktop\C_C++\链表的游标实现\Project1\main.c(147,27): warning C4311: “类型强制转换”: 从“void *”到“int”的指针截断
-  Project1.vcxproj -> C:\Users\32929\Desktop\C_C++\链表的游标实现\x64\Debug\Project1.exe

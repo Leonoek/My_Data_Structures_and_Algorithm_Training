@@ -1,5 +1,0 @@
-﻿  2.4.c
-  2.8.c
-  正在生成代码...
-C:\Users\32929\Desktop\c++\c语言程序设计：现代方法\第二章\2.4.c(14,8): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-  第二章.vcxproj -> C:\Users\32929\Desktop\c++\c语言程序设计：现代方法\x64\Debug\第二章.exe

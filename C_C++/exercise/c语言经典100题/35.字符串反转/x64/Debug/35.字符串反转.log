@@ -1,3 +1,0 @@
-﻿  main.c
-C:\Users\32929\Desktop\c++\c语言经典100题\35.字符串反转\main.c(7,22): warning C4013: “strlen”未定义；假设外部返回 int
-  35.字符串反转.vcxproj -> C:\Users\32929\Desktop\c++\c语言经典100题\x64\Debug\35.字符串反转.exe

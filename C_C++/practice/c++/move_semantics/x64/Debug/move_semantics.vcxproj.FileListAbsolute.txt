@@ -1,2 +1,0 @@
-C:\Users\32929\Desktop\c++\move_semantics\move_semantics\x64\Debug\move_semantics.exe
-C:\Users\32929\Desktop\c++\c++\move_semantics\x64\Debug\move_semantics.exe

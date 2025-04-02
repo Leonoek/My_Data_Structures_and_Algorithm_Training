@@ -1,2 +1,0 @@
-C:\Users\32929\Desktop\c++\c语言经典100题\x64\Debug\7.输出特殊图案.exe.lastcodeanalysissucceeded
-C:\Users\32929\Desktop\c++\c语言经典100题\7.输出特殊图案\x64\Debug\NativeCodeAnalysis.read.1.tlog

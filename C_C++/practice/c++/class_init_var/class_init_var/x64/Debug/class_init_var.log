@@ -1,3 +1,0 @@
-﻿  main.cpp
-C:\Users\32929\Desktop\c++_thread\class_init_var\class_init_var\main.cpp(10,18): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
-  class_init_var.vcxproj -> C:\Users\32929\Desktop\c++_thread\class_init_var\class_init_var\x64\Debug\class_init_var.exe
