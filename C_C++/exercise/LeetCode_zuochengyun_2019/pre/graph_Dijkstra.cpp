@@ -102,8 +102,10 @@ std::unordered_map<std::shared_ptr<Node>, int> Dijkstra(std::shared_ptr<Node> he
             if (distanceMap.find(toNode) == distanceMap.end())
             {
                 distanceMap.emplace(toNode, distance + edge->weight);
+            }else if (distanceMap[toNode] > distance + edge->weight)
+            {
+                distanceMap[toNode] = distance + edge->weight;
             }
-            distanceMap.emplace(edge->to, std::min(distanceMap[toNode], distance + edge->weight));
         }
         selectedNodes.emplace(miniNode);
         miniNode = getMiniDistanceAndUnselectedNode(distanceMap, selectedNodes);
@@ -123,8 +125,13 @@ int main() {
     };
 
     std::shared_ptr<Graph> graph = createGraph(vector1);
-    auto x = Dijkstra(graph->nodes.begin()->second);
+    auto result = Dijkstra(graph->nodes.begin()->second);
+    for (const auto& pair : result)
+    {
+        const auto& key = pair.first;
+        const auto& value = pair.second;
+        std::cout << key->value << " : " << value << std::endl;
+    }
     
-
     return 0;
 }
