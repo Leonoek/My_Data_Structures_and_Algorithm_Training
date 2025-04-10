@@ -1,3 +1,6 @@
+/*
+打印所有的子串
+*/
 #include <iostream>
 #include <cstring>
 using namespace std;
